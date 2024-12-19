@@ -1,0 +1,94 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Work Sans", sans-serif;
+  box-sizing: border-box;
+}
+:root{
+  --white: hsl(0, 0%, 100%);
+--lightpink: hsl(275, 100%, 97%);
+--darkpink: hsl(280, 18%, 67%);
+--grayishpurple: hsl(292, 16%, 49%);
+--Darkpurple: hsl(292, 42%, 14%);
+}
+body{
+background: var(--lightpink);
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+  height: 100vh;
+}
+.background{
+background: url('../assets/images/background-pattern-desktop.svg');
+height: 18rem;
+background-size: cover;
+}
+.container{
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+ justify-content: center;
+ align-items: top;
+ margin-top: -100px;
+
+}
+.container-item{
+  grid-column: 2;
+background: var(--white);
+padding: 40px;
+border-radius: 12px;
+}
+.container-title{
+  display: flex;
+}
+.container-title img{
+  margin-right: 15px;
+  margin-bottom: 20px;
+}
+.dl-faqs dt{
+  margin-bottom: 10px;
+  color: var(--Darkpurple);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+.decoration-line{
+  max-width: 450px;
+  height: 2px;
+  background: var(--lightpink);
+  margin: 20px 0 20px 0;
+  border-radius: 1px;
+}
+.js-faqs dt::after{
+  content: url('../assets/images/icon-plus.svg');
+  margin-left: 10px;
+  
+}
+.js-faqs dt.activo::after{
+  content: url('../assets/images/icon-minus.svg');
+  margin-left: 10px;
+}
+.dl-faqs dd{
+  display: none;
+  margin-bottom: 25px;
+color: var(--darkpink);
+}
+
+.dl-faqs dd.activo{
+  display: block;
+  animation: slideDown .5s forwards;
+}
+
+@keyframes slideDown{
+  from{
+    opacity: 0;
+    max-height: 0;
+  }
+  to{
+opacity: 1;
+max-height: 300px;
+  }
+}
+
+@media (min-width:800px) and (max-width:1000px){
+
+}
